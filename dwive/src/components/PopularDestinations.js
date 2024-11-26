@@ -1,16 +1,27 @@
 import React from 'react';
-import './populardestinations.css';
 
 const PopularDestinations = () => {
+  const destinations = [
+    { img: 'Tobago.jpg', name: 'Tobago', places: 87 },
+    { img: 'St Lucia.jpg', name: 'Saint Lucia', places: 56 },
+    { img: 'Jamaica.jpg', name: 'Jamaica', places: 90 },
+  ];
+
   return (
-    <div className="PopularDestinations">
+    <section className="popular-destinations">
       <h3>Popular Destinations</h3>
-      <div className="Destination">
-        <img src="/path-to-image.jpg" alt="Destination Name" />
-        <h4>Destination Name</h4>
-        <p>Short description about the destination.</p>
+      <div className="destinations-container">
+        {destinations.map((destination, index) => (
+          <div className="destination" key={index}>
+            <a href="Destinations.html">
+              <img src={destination.img} alt={destination.name} />
+              <h4>{destination.name}</h4>
+              <p>{destination.places} Places</p>
+            </a>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

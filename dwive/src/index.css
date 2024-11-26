@@ -1,31 +1,258 @@
+/* Global styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Script MT Bold', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000; /* Black text color */
+  background-color: #fff; /* White background */
 }
 
-.navbar-brand {
+header {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #000; /* Black text color */
+  padding: 1em;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 1em;
+}
+
+nav ul li a {
+  color: #000; /* Black text color */
+  text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+  background: url('https://media.cntraveler.com/photos/5668630dc3c9e01555a4d421/master/pass/palawan-philippines-coron-cr-alamy.jpg') no-repeat center bottom/cover;
+  height: 70vh;
+  color: #fff; /* White text color for content */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Ensures the text animation is contained within */
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin: 0.5em 0;
+  text-transform: uppercase; /* Transform text to uppercase */
+  animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+.hero .subheading {
+  font-size: 2em; /* Adjust size as needed */
+  margin: 0.4em 0;
+  animation: fadeIn 1s ease-out; /* Same animation as h2 */
+}
+
+.hero .button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.hero .button:hover {
+  background-color: #218838;
+}
+
+/* Search section */
+.container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 20px;
+}
+
+.box {
+  width: 100%;
+  height: 100%;            
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ccc; /* Example background color */
+  opacity: 0.8;  /* for demo purpose */
+  z-index: 1; /* Lower z-index than .search */
+}
+
+/* Adjust the top value to position the search form lower */
+/* Existing styles */
+
+/* Updated .search style */
+.search {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 2em;
+  text-align: center;
+  color: #000; /* Black text color */
+  position: absolute; /* Changed to absolute to overlay */
+  top: 570px; /* Adjust this value to move it up from the top */
+  left: 50%;
+  transform: translateX(-50%); /* Center the form horizontally */
+  z-index: 2; /* Ensure it is above other sections */
+  border-radius: 10px; /* Optional: Add rounded corners for better aesthetics */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: Add shadow for better visibility */
+}
+
+
+.search form {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  max-width: 100%;
+  flex-wrap: nowrap;
+}
+
+.search input[type="text"],
+.search input[type="date"],
+.search select {
+  padding: 0.5em;
+  font-size: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 150px;
+}
+
+.search .button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.search .button:hover {
+  background-color: #0056b3;
+}
+
+/* Popular destinations section */
+.popular-destinations {
+  padding-top: 10%;
+  text-align: center;
+}
+
+.popular-destinations h3 {
+  margin-bottom: 1em;
+  font-size: 2.5em;
+}
+
+.destination {
+  display: inline-block;
+  width: 30%;
+  margin: 1em;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Smooth image scale transition */
+}
+
+.destination a {
+  text-decoration: none;
+  color: #000; /* Black text color */
+}
+
+.destination img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.destination:hover img {
+  transform: scale(1.1); /* Scale up image on hover */
+}
+
+.destination h4 {
+  margin: 0.5em 0;
+  font-size: 1.2em;
   font-weight: bold;
 }
 
-.container {
-  max-width: 600px;
+.destination p {
+  margin: 0;
+  font-size: 1em;
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #2b082d;
+  background-color: #f8f9fa; /* Light gray background */
+  color: #000; /* Black text color */
   text-align: center;
-  padding: 10px 0;
+  padding: 1em;
+  position: relative;
+  width: 100%;
+  bottom: 0;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+/* Social links */
+.social-links a {
+  color: #007bff; /* Blue color for links */
+  text-decoration: none;
+  padding: 10px; /* Padding around links */
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
 }
 
+.social-links a:hover {
+  color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-50px); /* Start slightly above and move down */
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0); /* End at normal position */
+  }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .about {
+      flex-direction: column;
+      text-align: center;
+  }
+  .hero h1 {
+      font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  nav a {
+      display: block;
+      padding: 5px;
+  }
+}
 .logotext {
-  font-family: 'Playwrite CL', cursive;
+  font-family: "Playwrite CL", cursive;
+  font-size: 48px;
+  color: black;
+}.logotext {
+  font-family: "Playwrite CL", cursive;
   font-size: 48px;
   color: black;
 }
