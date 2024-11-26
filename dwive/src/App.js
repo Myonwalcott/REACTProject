@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './components/navbar';
 import CheckoutForm from './components/checkoutform';
 import Footer from './components/footer';
-import Hero from './components/Hero';
+import Hero from './components/hero';
 import Search from './components/search';
 import PopularDestinations from './components/populardestinations';
 import Login from './components/login';
@@ -25,4 +25,3 @@ function App() {
 }
 
 export default App;
-
