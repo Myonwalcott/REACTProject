@@ -1,20 +1,19 @@
 import React from 'react';
-import './search.css';
 
 const Search = () => {
   return (
-    <div className="Search">
-      <h3>Search for Destinations</h3>
-      <form>
-        <input type="text" placeholder="Enter destination" />
-        <select>
-          <option>Choose category</option>
-          <option>Beach</option>
-          <option>Mountain</option>
+    <section className="search">
+      <form action="checkout.html">
+        <input type="text" placeholder="Where would you like to go" name="destination" />
+        <input type="date" name="date" />
+        <select name="type">
+          <option value="adventure">Adventure</option>
+          <option value="relaxation">Relaxation</option>
+          <option value="cultural">Cultural</option>
         </select>
-        <button type="submit">Search</button>
+        <button type="submit" className="button">Search</button>
       </form>
-    </div>
+    </section>
   );
 };
 

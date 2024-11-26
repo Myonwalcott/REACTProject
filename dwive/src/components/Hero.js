@@ -1,13 +1,17 @@
 import React from 'react';
-import './hero.css';
 
 const Hero = () => {
   return (
-    <div className="Hero" style={{ backgroundImage: 'url(/path-to-image.jpg)' }}>
-      <h2>Welcome to Paradise</h2>
-      <p>Your dream destination awaits</p>
-      <button>Explore Now</button>
-    </div>
+    <section className="hero">
+      <h2>Chase The Adventure</h2>
+      <h3>
+        Plan and book your trip ahead, with travel tips, destination information
+        and inspiration from us
+      </h3>
+      <a className="button" href="Destinations.html">
+        Explore Now
+      </a>
+    </section>
   );
 };
 
