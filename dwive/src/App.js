@@ -2,9 +2,10 @@ import React from 'react';
 import Navbar from './components/navbar';
 import CheckoutForm from './components/checkoutform';
 import Footer from './components/footer';
-import Hero from './components/hero';
+import Hero from './components/Hero';
 import Search from './components/search';
 import PopularDestinations from './components/populardestinations';
+import Login from './components/login';
 import './index.css'; // Global styles
 import './App.css';   // Application-wide styles
 
