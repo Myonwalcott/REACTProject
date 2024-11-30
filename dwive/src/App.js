@@ -8,9 +8,11 @@ import PopularDestinations from './components/populardestinations';
 import Login from './components/login';
 import './index.css'; // Global styles
 import './App.css';   // Application-wide styles
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <Navbar />
       <header className="App-header">
@@ -21,6 +23,7 @@ function App() {
       <CheckoutForm />
       <Footer />
     </div>
+    </Router>
   );
 }
 
