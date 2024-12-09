@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const PopularDestinations = () => {
@@ -22,8 +22,8 @@ const PopularDestinations = () => {
 
   const containerStyle = {
     width: '100%',
-    height: '400px',
-    marginBottom: '30px',
+    height: '300px',
+    marginBottom: '20px',
   };
 
   const mapOptions = {
@@ -31,27 +31,39 @@ const PopularDestinations = () => {
     zoomControl: true,
   };
 
+  useEffect(() => {
+    document.body.classList.add('popular-destinations-page');
+
+    return () => {
+      document.body.classList.remove('popular-destinations-page');
+    };
+  }, []);
+
   return (
     <div>
-      <h1 className="text-center">Popular Destinations</h1>
-      <p className="text-center">
-        Explore these beautiful locations with a quick glance at their map locations.
-      </p>
-      {destinations.map((destination, index) => (
-        <div key={index} className="map-container">
-          <h2 className="text-center">{destination.name}</h2>
-          <LoadScript googleMapsApiKey="AIzaSyCLhMNlPgXcFG23EvMV4BytrMmNAFPAd58">
-            <GoogleMap
-              mapContainerStyle={containerStyle}
-              center={{ lat: destination.lat, lng: destination.lng }}
-              zoom={10}
-              options={mapOptions}
-            >
-              <Marker position={{ lat: destination.lat, lng: destination.lng }} />
-            </GoogleMap>
-          </LoadScript>
-        </div>
-      ))}
+      <div className="header-container">
+        <h1 className="text-center">Popular Destinations</h1>
+        <p className="text-center">
+          Explore these beautiful locations with a quick glance at their map locations.
+        </p>
+      </div>
+      <div className="destinations-wrapper">
+        {destinations.map((destination, index) => (
+          <div key={index} className="destination-card">
+            <h2 className="text-center">{destination.name}</h2>
+            <LoadScript googleMapsApiKey="AIzaSyCLhMNlPgXcFG23EvMV4BytrMmNAFPAd58">
+              <GoogleMap
+                mapContainerStyle={containerStyle}
+                center={{ lat: destination.lat, lng: destination.lng }}
+                zoom={10}
+                options={mapOptions}
+              >
+                <Marker position={{ lat: destination.lat, lng: destination.lng }} />
+              </GoogleMap>
+            </LoadScript>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

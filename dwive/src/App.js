@@ -6,9 +6,9 @@ import Hero from './components/hero';
 import Search from './components/search';
 import PopularDestinations from './components/populardestinations';
 import Login from './components/login';
+import About from './about'; // Import the About component
 import './index.css'; // Global styles
 import './App.css';   // Application-wide styles
-
 
 function App() {
   return (
@@ -25,12 +25,12 @@ function App() {
         } />
         <Route path="/destinations" element={
           <Layout>
-            <div> <PopularDestinations /></div>
+            <PopularDestinations />
           </Layout>
         } />
         <Route path="/about" element={
           <Layout>
-            <div>About Us</div>
+            <About /> {/* Render the About component */}
           </Layout>
         } />
         <Route path="/checkout" element={
