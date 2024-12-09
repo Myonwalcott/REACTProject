@@ -99,20 +99,22 @@ body.about-us-page {
 nav {
   background-color: #f8f9fa; /* Light gray background */
   color: #000; /* Black text color */
-  padding: 10px 0;
-  width: 100%; /* Full-width navbar */
+  padding: 10px 20px; /* Adjusted padding for better spacing */
+  width: 100vw; /* Full-width navbar */
   position: relative;
   border-bottom: 1px solid #ddd; /* Subtle bottom border */
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional subtle shadow */
+  display: flex; /* Ensure flex container */
+  justify-content: space-between; /* Space out content */
+  align-items: center; /* Center items vertically */
 }
 
 .navbar-container {
-  max-width: 1200px; /* Same width as the footer container */
-  margin: 0 auto; /* Center the content */
+  width: 100%; /* Full width for content alignment */
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px; /* Add padding for spacing */
 }
 
 .logotext {
@@ -140,31 +142,67 @@ nav {
   color: #007bff; /* Highlight on hover */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    gap: 10px;
-  }
+/* Hero section */
+.hero {
+  background: url('https://media.cntraveler.com/photos/5668630dc3c9e01555a4d421/master/pass/palawan-philippines-coron-cr-alamy.jpg') no-repeat center bottom/cover;
+  height: 70vh;
+  color: #fff; /* White text color for content */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Ensures the text animation is contained within */
 }
 
-/* Specific styles for the checkout page */
+.hero h2 {
+  font-size: 3em;
+  margin: 0.5em 0;
+  text-transform: uppercase; /* Transform text to uppercase */
+  animation: fadeIn 1s ease-out; /* Fade-in animation */
+}
+
+.hero .subheading {
+  font-size: 2em; /* Adjust size as needed */
+  margin: 0.4em 0;
+  animation: fadeIn 1s ease-out; /* Same animation as h2 */
+}
+
+.hero .button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Smooth transition for button hover */
+}
+
+.hero .button:hover {
+  background-color: #218838;
+}
+
+/* Checkout Page Adjustments */
 .checkout-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height */
+  flex-direction: column; /* Ensure proper stacking of content */
+  min-height: 100vh; /* Full viewport height */
   background-color: #ffffff; /* White background for the checkout page */
 }
 
+body.checkout-page {
+  background-image: none; /* Remove the background image */
+  background-color: #ffffff; /* Plain white background */
+}
+
+/* Form Container Styles */
 .form-container {
-  width: 100%;
-  max-width: 500px; /* Restrict form width */
+  max-width: 600px; /* Restrict form width */
+  margin: 0 auto; /* Center the form on the page */
   padding: 20px;
   background-color: #f8f9fa; /* Light gray background for the form */
   border-radius: 10px;
@@ -215,50 +253,21 @@ footer {
   border-top: 1px solid #ddd; /* Subtle separator */
 }
 
-/* Hero section */
-.hero {
-  background: url('https://media.cntraveler.com/photos/5668630dc3c9e01555a4d421/master/pass/palawan-philippines-coron-cr-alamy.jpg') no-repeat center bottom/cover;
-  height: 70vh;
-  color: #fff; /* White text color for content */
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden; /* Ensures the text animation is contained within */
-}
-
-.hero h2 {
-  font-size: 3em;
-  margin: 0.5em 0;
-  text-transform: uppercase; /* Transform text to uppercase */
-  animation: fadeIn 1s ease-out; /* Fade-in animation */
-}
-
-.hero .subheading {
-  font-size: 2em; /* Adjust size as needed */
-  margin: 0.4em 0;
-  animation: fadeIn 1s ease-out; /* Same animation as h2 */
-}
-
-.hero .button {
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  padding: 0.5em 1em;
-  font-size: 1em;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s ease; /* Smooth transition for button hover */
-}
-
-.hero .button:hover {
-  background-color: #218838;
-}
-
-/* Media queries */
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logotext {
+    margin-bottom: 15px; /* Add space between logo and nav links */
+  }
+
   .checkout-page {
     height: auto; /* Allow content to fit in smaller viewports */
     padding: 20px;
