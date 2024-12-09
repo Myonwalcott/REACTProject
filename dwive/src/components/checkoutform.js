@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from './navbar'; // Adjust the path if needed
+import Navbar from './navbar'; 
 
 function CheckoutForm() {
   const [form, setForm] = useState({
@@ -34,7 +34,8 @@ function CheckoutForm() {
 
   return (
     <div>
-      <Navbar /> {/* Add the Navbar component here */}
+
+      <div><Navbar></Navbar></div>
       <div className="checkout-page">
         <div className="form-container">
           <h2 className="text-center">Checkout</h2>
