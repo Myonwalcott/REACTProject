@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css'; // Import the CSS file for About page styles
 
 const About = () => {
+  useEffect(() => {
+    // Add class to the body for the About Us page
+    document.body.classList.add('about-us-page');
+    return () => {
+      // Remove class when component unmounts
+      document.body.classList.remove('about-us-page');
+    };
+  }, []);
+
   return (
     <div className="about-container">
       <div className="about-content">
@@ -21,3 +30,4 @@ const About = () => {
 };
 
 export default About;
+

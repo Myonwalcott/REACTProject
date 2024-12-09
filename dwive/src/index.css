@@ -21,6 +21,17 @@ body.checkout-page {
   background-image: none; /* Remove background image */
   background-color: #ffffff; /* Plain white background */
 }
+
+body.about-us-page {
+  background-image: url('C:\Users\arwaa\Documents\Advanced Front End CPAN 144\processProducts.js\REACTProject\dwive\src\pictures\ocean.jpg'); /* Replace with the correct path */
+  background-size: 100% 50%; /* Cover the width and 50% of the height */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-position: top center; /* Center horizontally and stick to the top */
+  background-color: #f1f8fd; /* White background for the rest of the page */
+  
+}
+
+
 /* Wrapper for all destinations */
 .destinations-wrapper {
   display: flex;
