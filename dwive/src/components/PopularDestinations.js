@@ -1,27 +1,58 @@
 import React from 'react';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const PopularDestinations = () => {
   const destinations = [
-    { img: 'Tobago.jpg', name: 'Tobago', places: 87 },
-    { img: 'St Lucia.jpg', name: 'Saint Lucia', places: 56 },
-    { img: 'Jamaica.jpg', name: 'Jamaica', places: 90 },
+    {
+      name: "Tobago",
+      lat: 11.2334,
+      lng: -60.6895,
+    },
+    {
+      name: "Jamaica",
+      lat: 18.1096,
+      lng: -77.2975,
+    },
+    {
+      name: "St. Lucia",
+      lat: 13.9094,
+      lng: -60.9789,
+    },
   ];
 
+  const containerStyle = {
+    width: '100%',
+    height: '400px',
+    marginBottom: '30px',
+  };
+
+  const mapOptions = {
+    disableDefaultUI: true,
+    zoomControl: true,
+  };
+
   return (
-    <section className="popular-destinations">
-      <h3>Popular Destinations</h3>
-      <div className="destinations-container">
-        {destinations.map((destination, index) => (
-          <div className="destination" key={index}>
-            <a href="Destinations.html">
-              <img src={destination.img} alt={destination.name} />
-              <h4>{destination.name}</h4>
-              <p>{destination.places} Places</p>
-            </a>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div>
+      <h1 className="text-center">Popular Destinations</h1>
+      <p className="text-center">
+        Explore these beautiful locations with a quick glance at their map locations.
+      </p>
+      {destinations.map((destination, index) => (
+        <div key={index} className="map-container">
+          <h2 className="text-center">{destination.name}</h2>
+          <LoadScript googleMapsApiKey="AIzaSyCLhMNlPgXcFG23EvMV4BytrMmNAFPAd58">
+            <GoogleMap
+              mapContainerStyle={containerStyle}
+              center={{ lat: destination.lat, lng: destination.lng }}
+              zoom={10}
+              options={mapOptions}
+            >
+              <Marker position={{ lat: destination.lat, lng: destination.lng }} />
+            </GoogleMap>
+          </LoadScript>
+        </div>
+      ))}
+    </div>
   );
 };
 

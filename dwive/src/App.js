@@ -20,13 +20,12 @@ function App() {
             <header className="App-header">
               <Hero />
               <Search />
-              <PopularDestinations />
             </header>
           </Layout>
         } />
         <Route path="/destinations" element={
           <Layout>
-            <div>Destinations</div>
+            <div> <PopularDestinations /></div>
           </Layout>
         } />
         <Route path="/about" element={
