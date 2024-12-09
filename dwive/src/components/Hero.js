@@ -8,7 +8,7 @@ const Hero = () => {
         Plan and book your trip ahead, with travel tips, destination information
         and inspiration from us
       </h3>
-      <a className="button" href="Destinations.html">
+      <a className="button" href="Destinations">
         Explore Now
       </a>
     </section>
