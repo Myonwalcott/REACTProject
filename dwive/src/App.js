@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/navbar';
+import Layout from './components/layout'; // Import the Layout component
 import CheckoutForm from './components/checkoutform';
-import Footer from './components/footer';
 import Hero from './components/hero';
 import Search from './components/search';
 import PopularDestinations from './components/populardestinations';
@@ -10,26 +9,42 @@ import Login from './components/login';
 import './index.css'; // Global styles
 import './App.css';   // Application-wide styles
 
+
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={
+      <Routes>
+        {/* Wrap all routes in the Layout component */}
+        <Route path="/" element={
+          <Layout>
             <header className="App-header">
               <Hero />
               <Search />
               <PopularDestinations />
             </header>
-          } />
-          <Route path="/destinations" element={<div>Destinations</div>} />
-          <Route path="/about" element={<div>About Us</div>} />
-          <Route path="/checkout" element={<CheckoutForm />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-        <Footer />
-      </div>
+          </Layout>
+        } />
+        <Route path="/destinations" element={
+          <Layout>
+            <div>Destinations</div>
+          </Layout>
+        } />
+        <Route path="/about" element={
+          <Layout>
+            <div>About Us</div>
+          </Layout>
+        } />
+        <Route path="/checkout" element={
+          <Layout>
+            <CheckoutForm />
+          </Layout>
+        } />
+        <Route path="/login" element={
+          <Layout>
+            <Login />
+          </Layout>
+        } />
+      </Routes>
     </Router>
   );
 }

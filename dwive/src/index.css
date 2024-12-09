@@ -197,14 +197,18 @@ nav ul li a {
 }
 
 footer {
-  background-color: #f8f9fa; /* Light gray background */
-  color: #000; /* Black text color */
+  background-color: #ffffff !important; /* Force white background */
+  color: #000000 !important; /* Force black text color */
   text-align: center;
-  padding: 1em;
+  padding: 2px 0; /* Thin footer */
+  font-size: 10px; /* Small font size */
   position: relative;
   width: 100%;
   bottom: 0;
+  border-top: 1px solid #ddd; /* Subtle separator */
 }
+
+
 
 /* Social links */
 .social-links a {
