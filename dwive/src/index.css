@@ -11,7 +11,79 @@ body {
   background-position: center;
 }
 
-/* Navbar styles */
+/* Remove background image for specific pages */
+body.popular-destinations-page {
+  background-image: none; /* Remove background image */
+  background-color: #ffffff; /* White background */
+}
+
+body.checkout-page {
+  background-image: none; /* Remove background image */
+  background-color: #ffffff; /* Plain white background */
+}
+/* Wrapper for all destinations */
+.destinations-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+}
+
+/* Each destination card */
+.destination-card {
+  width: 30%;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+  overflow: hidden; /* Clip map edges */
+}
+
+.destination-card:hover {
+  transform: translateY(-10px); /* Lift on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.destination-card h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  text-align: center;
+  color: #333; /* Dark gray for text */
+}
+
+.text-center {
+  text-align: center;
+}
+/* Header container for Popular Destinations */
+.header-container {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 10px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+}
+
+/* Hover effect for the header */
+.header-container:hover {
+  transform: translateY(-5px); /* Lift slightly on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+}
+
+.header-container h1 {
+  font-size: 2.5em;
+  margin: 10px 0;
+  color: #333; /* Darker text color */
+}
+
+.header-container p {
+  font-size: 1.2em;
+  color: #666; /* Subtle gray text for description */
+}
+
+
+
 /* Navbar styles */
 nav {
   background-color: #f8f9fa; /* Light gray background */
@@ -71,11 +143,6 @@ nav {
 }
 
 /* Specific styles for the checkout page */
-body.checkout-page {
-  background-image: none; /* Remove the background image */
-  background-color: #ffffff; /* Plain white background */
-}
-
 .checkout-page {
   display: flex;
   justify-content: center;
