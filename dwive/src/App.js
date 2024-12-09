@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar';
 import CheckoutForm from './components/checkoutform';
 import Footer from './components/footer';
@@ -8,21 +9,27 @@ import PopularDestinations from './components/populardestinations';
 import Login from './components/login';
 import './index.css'; // Global styles
 import './App.css';   // Application-wide styles
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-    <div className="App">
-      <Navbar />
-      <header className="App-header">
-        <Hero />
-        <Search />
-        <PopularDestinations />
-      </header>
-      <CheckoutForm />
-      <Footer />
-    </div>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <header className="App-header">
+              <Hero />
+              <Search />
+              <PopularDestinations />
+            </header>
+          } />
+          <Route path="/destinations" element={<div>Destinations</div>} />
+          <Route path="/about" element={<div>About Us</div>} />
+          <Route path="/checkout" element={<CheckoutForm />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 }
