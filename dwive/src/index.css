@@ -23,7 +23,7 @@ body.checkout-page {
 }
 
 body.about-us-page {
-  background-image: url(''); /* Replace with the correct path */
+  background-image: url('./pictures/ocean.jpg'); /* Replace with the correct path */
   background-size: 100% 50%; /* Cover the width and 50% of the height */
   background-repeat: no-repeat; /* Prevent repeating */
   background-position: top center; /* Center horizontally and stick to the top */
@@ -44,7 +44,7 @@ body.about-us-page {
 /* Each destination card */
 .destination-card {
   width: 30%;
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: #e0ecf8; /* Light gray background */
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
@@ -71,7 +71,7 @@ body.about-us-page {
   text-align: center;
   margin-bottom: 30px;
   padding: 10px;
-  background-color: #f8f9fa; /* Light gray background */
+  background-color: #ebf0f6; /* Light gray background */
   border-radius: 10px; /* Rounded corners */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
 }
