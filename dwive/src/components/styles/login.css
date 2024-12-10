@@ -1,15 +1,20 @@
-/* General body styling */
-body {
-  height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+
+/* Background styling for the login page */
+.login-page {
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center contents vertically */
+  justify-content: center; /* Center contents horizontally */
   background-image: url('https://th.bing.com/th/id/R.92b93b09e959ec082d782c1f2075b229?rik=HMOewSFmwgL2SQ&riu=http%3a%2f%2fstatic.tumblr.com%2fanekkke%2fH1mm7tlf4%2ftumblr_m4764jxzts1r6pdi0o1_500.gif&ehk=1GL4ObGWi5f1ke9YZ2vUbmEpSz6eVUq89CuCFRM3%2frU%3d&risl=&pid=ImgRaw&r=0');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
+  background-size: cover; /* Cover entire area */
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat; /* Prevent repeating */
 }
+
+
 
 /* Navbar adjustments */
 .navbar-brand {
