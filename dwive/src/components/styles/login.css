@@ -36,7 +36,7 @@ body {
   background-color: white;
   margin: auto;
   margin-top: 10%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgb(249, 243, 243);
   border-radius: 10px;
 }
 

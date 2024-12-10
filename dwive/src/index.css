@@ -142,47 +142,67 @@ nav {
   color: #007bff; /* Highlight on hover */
 }
 
+
 /* Hero section */
 .hero {
-  background: url('https://media.cntraveler.com/photos/5668630dc3c9e01555a4d421/master/pass/palawan-philippines-coron-cr-alamy.jpg') no-repeat center bottom/cover;
-  height: 70vh;
-  color: #fff; /* White text color for content */
+  background: url('https://media.cntraveler.com/photos/5668630dc3c9e01555a4d421/master/pass/palawan-philippines-coron-cr-alamy.jpg') 
+    no-repeat center center/cover;
+  height: 80vh; /* Adjusted for better visual balance */
+  color: #fff; /* White text for contrast */
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow: hidden; /* Ensures the text animation is contained within */
+  overflow: hidden; /* Prevents content from spilling out */
+
+  
 }
 
 .hero h2 {
-  font-size: 3em;
+  font-size: 3rem;
   margin: 0.5em 0;
-  text-transform: uppercase; /* Transform text to uppercase */
-  animation: fadeIn 1s ease-out; /* Fade-in animation */
+  text-transform: uppercase; /* Makes the title stand out */
+  animation: fadeIn 1s ease-out;
 }
 
-.hero .subheading {
-  font-size: 2em; /* Adjust size as needed */
-  margin: 0.4em 0;
-  animation: fadeIn 1s ease-out; /* Same animation as h2 */
+.hero h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+  line-height: 1.5;
 }
 
 .hero .button {
   background-color: #28a745;
   color: #fff;
+  padding: 0.8em 1.5em;
+  font-size: 1rem;
   border: none;
-  padding: 0.5em 1em;
-  font-size: 1em;
+  border-radius: 5px;
+  text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease; /* Smooth transition for button hover */
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .hero .button:hover {
   background-color: #218838;
+  transform: scale(1.05); /* Slight zoom effect on hover */
 }
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* Checkout Page Adjustments */
 .checkout-page {
