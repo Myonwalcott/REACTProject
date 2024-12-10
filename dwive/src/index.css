@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   color: #000; /* Black text color */
   background-color: #fff; /* White background */
-  background-image: url('https://media.cntraveler.com/photos/5668630dc3c9e01555a4d421/master/pass/palawan-philippines-coron-cr-alamy.jpg');
+  background-image: url('./pictures/island3.jpg'); 
   background-size: cover;
   background-position: center;
 }
