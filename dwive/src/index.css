@@ -157,7 +157,7 @@ nav {
 }
 
 body.checkout-page {
-  background-image: none; /* Remove the background image */
+  background: none; /* Remove the background image */
   background-color: #ffffff; /* Plain white background */
 }
 
